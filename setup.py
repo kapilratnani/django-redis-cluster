@@ -11,7 +11,7 @@ setup(
     url = "https://github.com/glumu/django-redis-cluster",
     author = "Glen",
     author_email = "glumu@126.com",
-    version = "1.0.0",
+    version = "1.0.1",
     packages = [
         "django_redis_cluster",
         "django_redis_cluster.client",
