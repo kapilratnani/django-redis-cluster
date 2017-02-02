@@ -56,8 +56,19 @@ class DefaultClient(object):
     
     def __contains__(self, key):
         return self.has_key(key)
-    
-    
+
+    def get_client(self, write=True):
+        """
+        Method used for obtain a raw redis client.
+
+        This function is used by almost all cache backend
+        operations for obtain a native redis client/connection
+        instance.
+        """
+
+        return self._client
+
+
     def add(self, key, value, timeout=DEFAULT_TIMEOUT, version=None):
         '''添加一个键值，如果存在则返回失败'''
         return self.set(key, value, timeout, version=version, nx=True)
