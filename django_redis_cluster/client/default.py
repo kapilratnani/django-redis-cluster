@@ -66,7 +66,6 @@ class DefaultClient(object):
         '''缓存一个键值'''
         nkey = self._make_key(key, version=version)
         nvalue = self.encode(value)
-        print(nkey, nvalue)
         
         if timeout is True:
             warnings.warn("Using True as timeout value, is now deprecated.", DeprecationWarning)
